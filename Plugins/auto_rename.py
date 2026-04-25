@@ -18,7 +18,7 @@ async def auto_rename_command(client, message):
         await message.reply_text(
             "**Please provide a new name after the command /autorename**\n\n"
             "Here's how to use it:\n"
-            "**Example format:** `/autorename Overflow [S{season}E{episode}] - [Dual] {quality}`"
+            "**Example format:** `/Autorename Anime Name S{season} - E{episode} [Dual] {quality} @Ongoing_english_dub`"
         )
         return
 
@@ -41,7 +41,7 @@ async def set_media_command(client, message):
         [InlineKeyboardButton("🎵 Audio",     callback_data="setmedia_audio")],
     ])
     await message.reply_text(
-        "✨ **Choose Your Media Vibe** ✨\n"
+        " ⭐**Choose Your Media type**⭐ \n"
         "Select the type of media you'd like to set as your preference:",
         reply_markup=keyboard,
         quote=True
@@ -66,7 +66,7 @@ async def handle_media_selection(client, callback_query: CallbackQuery):
         await callback_query.answer(f"Locked in: {media_type_display} 🎉")
         await callback_query.message.edit_text(
             f"🎯 **Media Preference Updated** 🎯\n"
-            f"Your vibe is now set to: **{media_type_display}** ✅\n"
+            f"Your type is now set to: **{media_type_display}** ✅\n"
             f"Ready to roll with your choice!"
         )
     except Exception as e:
