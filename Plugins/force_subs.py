@@ -31,7 +31,7 @@ else:
 _last_prompted: dict[int, float] = {}
 PROMPT_COOLDOWN_SECONDS = 30
 
-IMAGE_URL = getattr(Config, "FORCE_SUB_IMAGE", "https://graph.org/file/a27d85469761da836337c.jpg")
+IMAGE_URL = getattr(Config, "FORCE_SUB_IMAGE", "https://files.catbox.moe/xqr30z.jpg")
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
