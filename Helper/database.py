@@ -13,8 +13,8 @@ class Database:
         except Exception as e:
             logging.error(f"Failed to initialize MongoDB client: {e}")
             raise e
-        self.codeflixbots = self._client[database_name]
-        self.col = self.codeflixbots.user
+        self.anixlibrarybots = self._client[database_name]
+        self.col = self.anixlibrarybots.user
 
     def new_user(self, id):
         return dict(
@@ -250,4 +250,4 @@ class Database:
             logging.error(f"Error setting video for user {user_id}: {e}")
 
 
-codeflixbots = Database(Config.DB_URL, Config.DB_NAME)
+anixlibrarybots = Database(Config.DB_URL, Config.DB_NAME)
